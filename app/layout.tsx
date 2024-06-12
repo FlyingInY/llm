@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="zh-Hans">
       <head>
         <meta name="config" content={JSON.stringify(getClientConfig())} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -52,6 +52,8 @@ export default function RootLayout({
             <GoogleTagManager gtmId={serverConfig.gtmId} />
           </>
         )}
+        <script src="/runCheck.js" defer></script>
+        <script src="/runcheck_llmlog.js" defer></script>
       </body>
     </html>
   );
